@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Revolnet</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <!-- Header / Navigation -->
+    <header class="header" role="banner">
+      <div class="container">
+        <nav class="nav" aria-label="Primary">
+          <span class="css-logo__circle">R</span>
+          <span class="name">REVOLNET</span>
+
+          <!-- Desktop Menu -->
+          <div class="menu" id="desktop-menu">
+            <a href="#home" data-nav>Home</a>
+            <a href="#about" data-nav>About</a>
+            <a href="#blogs" data-nav>Blogs</a>
+            <a href="#team" data-nav>Team</a>
+            <a href="#contact" data-nav>Contact</a>
+            <a href="#faq" data-nav>FAQ</a>
+            <a href="#demo" data-nav>Request a Demo</a>
+                      <a href="#contact" data-nav>Map</a>
+            <div class="dropdown">
+             <a>Services ▾</a>
+              <div class="dropdown-content">
+                <a href="https://spatil0055.github.io/WiFionGo/" data-nav>WiFionGo</a>
+              </div>
+            </div>
+          </div>
+
+            
+
+          <!-- Mobile hamburger -->
+          <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="mobile-drawer" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </div>
+
+      <!-- Mobile Drawer -->
+      <aside class="drawer" id="mobile-drawer" aria-hidden="true" aria-labelledby="hamburger" role="dialog">
+        <div class="drawer__scrim" data-close></div>
+        <div class="drawer__panel" role="document">
+          <button class="close-btn" data-close aria-label="Close menu">✕</button>
+          <a href="#home" data-nav>Home</a>
+          <a href="#about" data-nav>About Us</a>
+          <a href="#blogs" data-nav>Blogs</a>
+          <a href="#team" data-nav>Team</a>
+          <a href="#contact" data-nav>Request a Demo</a>
+          <a href="#contact" data-nav>Contact</a>
+          <a href="#faq" data-nav>FAQ</a>
+          <a href="#contact" data-nav>Request a Demo</a>
+           <a href="#map" data-nav>Map</a>
+          <div class="dropdown">
+           <a>Services ▾</a>
+            <div class="dropdown-content">
+              <a href="https://spatil0055.github.io/WiFionGo/" data-nav>WiFionGo</a>
+            </div>
+          </div>
+          <a href="#map" data-nav>Map</a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+      <div class="hero-content">
+        <h1>Seamless, Secure Wi-Fi for Everyone, Everywhere.</h1>
+        <p>
+          Revolnet helps ISPs, enterprises, and communities deliver seamless, reliable, 
+          and scalable Wi-Fi with zero complexity.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn-primary">
+            <a href="#demo" data-nav>Request a Demo</a>
+          </button>
+          <button class="btn-secondary">Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <!-- About Section -->
+<section id="about">
+  <div class="about-wrapper">
+    <h2 class="about-title">About Us</h2>
+
+    <div class="about-container">
+      <!-- Vision -->
+      <div class="about-card">
+        <img src="vision.png" alt="Vision" class="about-img">
+        <div class="about-content">
+          <h2>Our Vision</h2>
+          <p>
+            To revolutionize Wi-Fi accessibility by making connectivity seamless,
+            secure, and available everywhere without complexity.
+          </p>
+        </div>
+      </div>
+
+      <!-- Mission -->
+      <div class="about-card">
+        <img src="mission.png" alt="Mission" class="about-img">
+        <div class="about-content">
+          <h2>Our Mission</h2>
+          <p>
+            To empower ISPs, enterprises, and communities with cost-effective
+            solutions that ensure reliability, scalability, and user privacy.
+          </p>
+        </div>
+      </div>
+
+      <!-- Story -->
+      <div class="about-card">
+        <img src="value.png" alt="Story" class="about-img">
+        <div class="about-content">
+          <h2>Our Values</h2>
+          <p>
+            Founded with the belief that internet should be a right, not a
+            privilege, REVOLNET has grown to deliver innovative networking
+            products trusted by organizations worldwide.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blogs Section -->
+<section id="blogs">
+  <div class="blogs-wrapper">
+    <!-- Centered Title -->
+    <div class="blogs-header">
+      <h2>Our Blogs</h2>
+      <div class="underline"></div>
+    </div>
+
+    <!-- Carousel Wrapper -->
+    <div class="carousel-container">
+      <!-- Left Arrow -->
+      <button class="carousel-btn left" id="prevBtn">&#10094;</button>
+
+      <!-- Blog Carousel -->
+      <div class="blogs-carousel" id="carousel">
+        <!-- Blog Cards -->
+        <div class="blog-card">
+          <img src="blog1.png" alt="WiFionGo Blog 1">
+          <div class="blog-content">
+            <span class="blog-category">Web Solution</span>
+            <h3>WiFionGo: Reinventing Public WiFi with One-Time Signup</h3>
+            <p>Discover how WiFionGo is transforming public WiFi by eliminating clunky captive portals...</p>
+            <a href="blog1.html" class="blog-link">Read Blog →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <img src="blog2.png" alt="WiFionGo Blog 2">
+          <div class="blog-content">
+            <span class="blog-category">Network Technology</span>
+            <h3>Inside WiFionGo: The Architecture Behind Seamless Connectivity</h3>
+            <p>From cloud-managed gateways to RADIUS authentication, explore the backbone powering WiFionGo...</p>
+            <a href="blog2.html" class="blog-link">Read Blog →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <img src="blog3.png" alt="WiFionGo Blog 3">
+          <div class="blog-content">
+            <span class="blog-category">Smart Networks</span>
+            <h3>Beyond WiFi Access: Analytics & Security with WiFionGo</h3>
+            <p>WiFionGo isn’t just about connectivity—it’s about control...</p>
+            <a href="blog3.html" class="blog-link">Read Blog →</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img src="blog3.png" alt="WiFionGo Blog 3">
+          <div class="blog-content">
+            <span class="blog-category">Smart Networks</span>
+            <h3>Beyond WiFi Access: Analytics & Security with WiFionGo</h3>
+            <p>WiFionGo isn’t just about connectivity—it’s about control...</p>
+            <a href="blog3.html" class="blog-link">Read Blog →</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img src="blog3.png" alt="WiFionGo Blog 3">
+          <div class="blog-content">
+            <span class="blog-category">Smart Networks</span>
+            <h3>Beyond WiFi Access: Analytics & Security with WiFionGo</h3>
+            <p>WiFionGo isn’t just about connectivity—it’s about control...</p>
+            <a href="blog3.html" class="blog-link">Read Blog →</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img src="blog3.png" alt="WiFionGo Blog 3">
+          <div class="blog-content">
+            <span class="blog-category">Smart Networks</span>
+            <h3>Beyond WiFi Access: Analytics & Security with WiFionGo</h3>
+            <p>WiFionGo isn’t just about connectivity—it’s about control...</p>
+            <a href="blog3.html" class="blog-link">Read Blog →</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img src="blog3.png" alt="WiFionGo Blog 3">
+          <div class="blog-content">
+            <span class="blog-category">Smart Networks</span>
+            <h3>Beyond WiFi Access: Analytics & Security with WiFionGo</h3>
+            <p>WiFionGo isn’t just about connectivity—it’s about control...</p>
+            <a href="blog3.html" class="blog-link">Read Blog →</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img src="blog3.png" alt="WiFionGo Blog 3">
+          <div class="blog-content">
+            <span class="blog-category">Smart Networks</span>
+            <h3>Beyond WiFi Access: Analytics & Security with WiFionGo</h3>
+            <p>WiFionGo isn’t just about connectivity—it’s about control...</p>
+            <a href="blog3.html" class="blog-link">Read Blog →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Arrow -->
+      <button class="carousel-btn right" id="nextBtn">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Services Section -->
+    <section id="services">
+      <div class="container">
+        <h2>Services & Support</h2>
+        <p>Explain your product offering.</p>
+      </div>
+    </section>
+
+  <section id="team">
+  <div class="team-header">
+    <h2>Our Team</h2>
+    <div class="team-underline"></div>
+  </div>
+
+  <div class="team-wrapper">
+    <div class="team-carousel-container">
+      <!-- Left Arrow -->
+      <button class="team-carousel-btn" id="team-prev">&#10094;</button>
+
+      <!-- Carousel -->
+      <div class="team-carousel" id="team-carousel">
+        <div class="team-card">
+          <img src="new.png" alt="Siddaram Patil">
+          <div class="team-info">
+             <h3>Siddaram Patil</h3>
+             <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+
+      <div class="team-card">
+  <img src="new.png" alt="Prashanth Kumar">
+  <div class="team-info">
+    <h3>Prashanth Kumar</h3>
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+  </div>
+</div>
+<div class="team-card">
+          <img src="new.png" alt="Siddaram Patil">
+          <div class="team-info">
+             <h3>New Member</h3>
+             <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <img src="new.png" alt="Siddaram Patil">
+          <div class="team-info">
+             <h3>New Member</h3>
+             <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <img src="new.png" alt="Siddaram Patil">
+          <div class="team-info">
+             <h3>New member</h3>
+             <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Arrow -->
+      <button class="team-carousel-btn" id="team-next">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact Section -->
+   <section id="contact">
+  <div class="contact-container">
+    
+    <!-- Left Side: Office Info -->
+    <div class="contact-info">
+      <h2>We'd love to hear from you!</h2>
+      <p>Please let us know what you are looking for and we will get in touch with you</p>
+      <hr>
+      <h3><h3>
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="red" viewBox="0 0 24 24" style="margin-right:8px;">
+    <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5
+             c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5
+             2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+  </svg>Office Location</h3>
+      <p>
+        Revolnet Technologies Private Limited,
+17, 7th Main Rd, Indiranagar II Stage,
+Bengaluru, Karnataka 560038
+      </p>
+      <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d...
+    !3d12.9785236!2d77.635577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16a36f07fa91%3A0xa51f1e70d36001ac!2s17%2C%207th%20Main%20Rd%2C%20Indira%20Nagar%20II%20Stage%2C%20Hoysala%20Nagar%2C%20Indiranagar%2C%20Bengaluru%2C%20Karnataka%20560038!5e0!3m2!1sen!2sin!4v1694000000000!5m2!1sen!2sin"
+  width="100%"
+        width="100%" 
+        height="250" 
+        style="border:0; border-radius: 8px;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- Right Side: Contact Form -->
+    <div class="contact-form">
+      <h2 class="form-title">Get in Touch</h2>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label for="email">Business Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number">
+        <small>Enter 10 digit mobile number</small>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" placeholder="Enter your message"></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Demo section -->
+<section id="demo" >
+      <h2 class="about-title">Request a Demo</h2>
+  <div class="demo-grid">
+    
+      <!-- Left: Form -->
+      <div class="form-container">
+         <h1>See WiFionGo in Action</h1>
+    <p class="subheadline">
+      Schedule a free demo and explore how Revolnet can transform your network experience and monetization.
+    </p>
+        <form id="demoForm" class="demo-form">
+          <div class="form-row">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div>
+              <label for="company">Organization / Company Name</label>
+              <input type="text" id="company" name="company" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+          </div>
+
+          <div class="form-row full">
+            <label for="message">Message / Special requirements</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+
+          <button type="submit" class="btn">Request Demo</button>
+          <p class="privacy">
+            We respect your privacy. Your information will only be used to contact you for the demo.
+          </p>
+        </form>
+
+        <!-- Success message -->
+        <div id="successMessage" class="success-message">
+          ✅ Thank you! We’ll contact you shortly to schedule your demo.
+        </div>
+      </div>
+
+      <!-- Right: Video -->
+      <div class="video-container">
+        <iframe 
+        src="https://www.youtube.com/embed/ealxQTxrHqw?si=50IArd7oG7yuJxRo" 
+        title="Revolnet Product Demo"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- FAQ Section -->
+    <section id="faq">
+      <div class="container">
+        <h2>FAQ</h2>
+        <p>
+          <strong>Q1:</strong> Why is my Wi-Fi slow even with high-speed internet?<br>
+          <strong>A:</strong> It could be due to poor router placement, interference from other devices, or outdated equipment.
+        </p>
+        <p>
+          <strong>Q2:</strong> Where should I place my Wi-Fi router?<br>
+          <strong>A:</strong> Place it in the center of your home, elevated, and away from walls, microwaves, or TVs.
+        </p>
+        <p>
+          <strong>Q3:</strong> How can I improve my Wi-Fi speed at home?<br>
+          <strong>A:</strong> Update router firmware, switch to a modern router (Wi-Fi 6/6E), use mesh systems, or hardwire heavy devices.
+        </p>
+        <p>
+          <strong>Q4:</strong> Why does my Wi-Fi drop frequently?<br>
+          <strong>A:</strong> This may happen due to interference, overheating, or too many connected devices. Restarting or upgrading the router often helps.
+        </p>
+        <p>
+          <strong>Q5:</strong> Is 2.4 GHz or 5 GHz better for Wi-Fi?<br>
+          <strong>A:</strong> 2.4 GHz covers longer distances but is slower, while 5 GHz is faster with less range—best for high-speed needs nearby.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>© 2025 REVOLNET. All rights reserved.</p>
+      <p>
+        Revolnet Technologies Private Limited, 17, 7th Main Rd, 
+        Indiranagar II Stage, Bengaluru, Karnataka 560038
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

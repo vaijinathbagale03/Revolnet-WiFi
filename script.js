@@ -139,49 +139,32 @@ teamPrev.addEventListener("click", () => {
 
 
 // demo section
-document.getElementById("demoForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+   document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("demoForm");
+    const successMessage = document.getElementById("successMessage");
 
-  const email = document.getElementById("email").value;
-  // if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-  //   alert("Please enter a valid email address.");
-  //   return;
-  // }
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // prevent page reload
 
-  // Normally you would send data to your server here with fetch()
+      // Show success message
+      successMessage.style.display = "block";
 
-  document.getElementById("successMessage").style.display = "block";
-  this.reset();
-});
-
-
-// FAQs section
-
-const questions = document.querySelectorAll(".faq-question");
-
-questions.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const item = btn.parentElement;
-    const answer = item.querySelector(".faq-answer");
-    const icon = btn.querySelector(".icon");
-
-    // Close other open FAQs
-    document.querySelectorAll(".faq-answer").forEach(el => {
-      if (el !== answer) el.style.display = "none";
+      // Reset form
+      form.reset();
     });
-    document.querySelectorAll(".faq-question .icon").forEach(ic => {
-      if (ic !== icon) ic.textContent = "+";
-    });
-
-    // Toggle current
-    if (answer.style.display === "block") {
-      answer.style.display = "none";
-      icon.textContent = "+";
-    } else {
-      answer.style.display = "block";
-      icon.textContent = "−";
-    }
   });
+
+
+  // FQAS
+let answers = document.querySelectorAll(".accordion");
+answers.forEach((event) => {
+    event.addEventListener("click", () => {
+        if (event.classList.contains("active")) {
+            event.classList.remove("active");
+        } else {
+            event.classList.add("active");
+        }
+    });
 });
 
 
@@ -193,5 +176,9 @@ const notif = document.querySelector(".notification");
 setInterval(() => {
   notif.style.visibility = notif.style.visibility === "hidden" ? "visible" : "hidden";
 }, 800);
+
+
+
+
 
 

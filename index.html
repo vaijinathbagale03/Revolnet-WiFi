@@ -7,6 +7,17 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  
+  <!-- Sticky WhatsApp Chat Button -->
+  <div class="whatsapp-chat">
+    <a href="https://wa.me/917020333975?text=Hello!%20I%20need%20some%20help." target="_blank">
+      <div class="chat-btn">
+        <span class="text">Chat with us!</span>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        <span class="notification">1</span>
+      </div>
+    </a>
+  </div>
   <main>
     <!-- Header / Navigation -->
     <header class="header" role="banner">
@@ -133,102 +144,47 @@
 
 <!-- Blogs Section -->
 <section id="blogs">
-  <div class="blogs-wrapper">
-    <!-- Centered Title -->
-    <div class="blogs-header">
-      <h2>Our Blogs</h2>
-      <div class="underline"></div>
-    </div>
+  <!-- Section Title -->
+  <h2 class="blog-title">Our Blogs</h2>
 
-    <!-- Carousel Wrapper -->
-    <div class="carousel-container">
-      <!-- Left Arrow -->
-      <button class="carousel-btn left" id="prevBtn">&#10094;</button>
-
-      <!-- Blog Carousel -->
-      <div class="blogs-carousel" id="carousel">
-        <!-- Blog Cards -->
-        <div class="blog-card">
-          <img src="blog1.png" alt="WiFionGo Blog 1">
-          <div class="blog-content">
-            <span class="blog-category">Web Solution</span>
-            <h3>WiFionGo: Reinventing Public WiFi with One-Time Signup</h3>
-            <p>Discover how WiFionGo is transforming public WiFi by eliminating clunky captive portals...</p>
-            <a href="blog1.html" class="blog-link">Read Blog →</a>
-          </div>
-        </div>
-
-        <div class="blog-card">
-          <img src="blog2.png" alt="WiFionGo Blog 2">
-          <div class="blog-content">
-            <span class="blog-category">Network Technology</span>
-            <h3>Inside WiFionGo: The Architecture Behind Seamless Connectivity</h3>
-            <p>From cloud-managed gateways to RADIUS authentication, explore the backbone powering WiFionGo...</p>
-            <a href="blog2.html" class="blog-link">Read Blog →</a>
-          </div>
-        </div>
-
-        <div class="blog-card">
-          <img src="blog3.png" alt="WiFionGo Blog 3">
-          <div class="blog-content">
-            <span class="blog-category">Smart Networks</span>
-            <h3>Beyond WiFi Access: Analytics & Security with WiFionGo</h3>
-            <p>WiFionGo isn’t just about connectivity—it’s about control...</p>
-            <a href="blog3.html" class="blog-link">Read Blog →</a>
-          </div>
-        </div>
-        <div class="blog-card">
-          <img src="blog3.png" alt="WiFionGo Blog 3">
-          <div class="blog-content">
-            <span class="blog-category">Smart Networks</span>
-            <h3>Beyond WiFi Access: Analytics & Security with WiFionGo</h3>
-            <p>WiFionGo isn’t just about connectivity—it’s about control...</p>
-            <a href="blog3.html" class="blog-link">Read Blog →</a>
-          </div>
-        </div>
-        <div class="blog-card">
-          <img src="blog3.png" alt="WiFionGo Blog 3">
-          <div class="blog-content">
-            <span class="blog-category">Smart Networks</span>
-            <h3>Beyond WiFi Access: Analytics & Security with WiFionGo</h3>
-            <p>WiFionGo isn’t just about connectivity—it’s about control...</p>
-            <a href="blog3.html" class="blog-link">Read Blog →</a>
-          </div>
-        </div>
-        <div class="blog-card">
-          <img src="blog3.png" alt="WiFionGo Blog 3">
-          <div class="blog-content">
-            <span class="blog-category">Smart Networks</span>
-            <h3>Beyond WiFi Access: Analytics & Security with WiFionGo</h3>
-            <p>WiFionGo isn’t just about connectivity—it’s about control...</p>
-            <a href="blog3.html" class="blog-link">Read Blog →</a>
-          </div>
-        </div>
-        <div class="blog-card">
-          <img src="blog3.png" alt="WiFionGo Blog 3">
-          <div class="blog-content">
-            <span class="blog-category">Smart Networks</span>
-            <h3>Beyond WiFi Access: Analytics & Security with WiFionGo</h3>
-            <p>WiFionGo isn’t just about connectivity—it’s about control...</p>
-            <a href="blog3.html" class="blog-link">Read Blog →</a>
-          </div>
-        </div>
-        <div class="blog-card">
-          <img src="blog3.png" alt="WiFionGo Blog 3">
-          <div class="blog-content">
-            <span class="blog-category">Smart Networks</span>
-            <h3>Beyond WiFi Access: Analytics & Security with WiFionGo</h3>
-            <p>WiFionGo isn’t just about connectivity—it’s about control...</p>
-            <a href="blog3.html" class="blog-link">Read Blog →</a>
-          </div>
-        </div>
+  <!-- Blog Container -->
+  <div class="blog-container">
+    <!-- Blog Card 1 -->
+    <div class="blog-card">
+      <img src="blog1.png" alt="WiFionGo Blog 1" class="blog-img">
+      <div class="blog-content">
+        <span class="blog-category">Web Solution</span>
+        <h3>WiFionGo: Reinventing Public WiFi with One-Time Signup</h3>
+        <p>Discover how WiFionGo is transforming public WiFi by eliminating clunky captive portals...</p>
+        <a href="blog1.html" class="blog-link">Read Blog →</a>
       </div>
-
-      <!-- Right Arrow -->
-      <button class="carousel-btn right" id="nextBtn">&#10095;</button>
     </div>
+
+    <!-- Blog Card 2 -->
+    <div class="blog-card">
+      <img src="blog2.png" alt="WiFionGo Blog 2" class="blog-img">
+      <div class="blog-content">
+        <span class="blog-category">Network Technology</span>
+        <h3>Inside WiFionGo: The Architecture Behind Seamless Connectivity</h3>
+        <p>From cloud-managed gateways to RADIUS authentication, explore the backbone powering WiFionGo...</p>
+        <a href="blog2.html" class="blog-link">Read Blog →</a>
+      </div>
+    </div>
+
+    <!-- Blog Card 3 -->
+    <div class="blog-card">
+      <img src="blog3.png" alt="WiFionGo Blog 3" class="blog-img">
+      <div class="blog-content">
+        <span class="blog-category">Smart Networks</span>
+        <h3>Beyond WiFi Access: Analytics & Security with WiFionGo</h3>
+        <p>WiFionGo isn’t just about connectivity—it’s about control...</p>
+        <a href="blog3.html" class="blog-link">Read Blog →</a>
+      </div>
+    </div>
+
   </div>
 </section>
+
 
 
 
@@ -240,63 +196,38 @@
       </div>
     </section>
 
-  <section id="team">
-  <div class="team-header">
-    <h2>Our Team</h2>
-    <div class="team-underline"></div>
-  </div>
+<section id="team">
+  <h2 class="team-title">Our Team</h2>
+  <div class="team-underline"></div>
 
-  <div class="team-wrapper">
-    <div class="team-carousel-container">
-      <!-- Left Arrow -->
-      <button class="team-carousel-btn" id="team-prev">&#10094;</button>
-
-      <!-- Carousel -->
-      <div class="team-carousel" id="team-carousel">
-        <div class="team-card">
-          <img src="new.png" alt="Siddaram Patil">
-          <div class="team-info">
-             <h3>Siddaram Patil</h3>
-             <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-          </div>
-        </div>
-
-      <div class="team-card">
-  <img src="new.png" alt="Prashanth Kumar">
-  <div class="team-info">
-    <h3>Prashanth Kumar</h3>
-    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-  </div>
-</div>
-<div class="team-card">
-          <img src="new.png" alt="Siddaram Patil">
-          <div class="team-info">
-             <h3>New Member</h3>
-             <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-          </div>
-        </div>
-
-        <div class="team-card">
-          <img src="new.png" alt="Siddaram Patil">
-          <div class="team-info">
-             <h3>New Member</h3>
-             <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-          </div>
-        </div>
-
-        <div class="team-card">
-          <img src="new.png" alt="Siddaram Patil">
-          <div class="team-info">
-             <h3>New member</h3>
-             <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-          </div>
-        </div>
-
+  <div class="team-container">
+    <!-- Team Member 1 -->
+    <div class="team-card">
+      <img src="new.png" alt="Siddaram Patil" class="team-img">
+      <div class="team-info">
+        <h3>Siddaram Patil</h3>
+        <p class="team-role">Role</p>
+        <p class="team-desc">
+         Introduction
+        </p>
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
       </div>
-
-      <!-- Right Arrow -->
-      <button class="team-carousel-btn" id="team-next">&#10095;</button>
     </div>
+
+    <!-- Team Member 2 -->
+    <div class="team-card">
+      <img src="new.png" alt="Prashanth Kumar" class="team-img">
+      <div class="team-info">
+        <h3>Prashanth Kumar</h3>
+        <p class="team-role">Role</p>
+        <p class="team-desc">
+      Description
+        </p>
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+
+
   </div>
 </section>
 
@@ -374,7 +305,7 @@ Bengaluru, Karnataka 560038
               <input type="text" id="name" name="name" required />
             </div>
             <div>
-              <label for="company">Organization / Company Name</label>
+              <label for="company">Organization / Company </label>
               <input type="text" id="company" name="company" />
             </div>
           </div>
@@ -422,31 +353,86 @@ Bengaluru, Karnataka 560038
 
 
     <!-- FAQ Section -->
-    <section id="faq">
-      <div class="container">
-        <h2>FAQ</h2>
-        <p>
-          <strong>Q1:</strong> Why is my Wi-Fi slow even with high-speed internet?<br>
-          <strong>A:</strong> It could be due to poor router placement, interference from other devices, or outdated equipment.
-        </p>
-        <p>
-          <strong>Q2:</strong> Where should I place my Wi-Fi router?<br>
-          <strong>A:</strong> Place it in the center of your home, elevated, and away from walls, microwaves, or TVs.
-        </p>
-        <p>
-          <strong>Q3:</strong> How can I improve my Wi-Fi speed at home?<br>
-          <strong>A:</strong> Update router firmware, switch to a modern router (Wi-Fi 6/6E), use mesh systems, or hardwire heavy devices.
-        </p>
-        <p>
-          <strong>Q4:</strong> Why does my Wi-Fi drop frequently?<br>
-          <strong>A:</strong> This may happen due to interference, overheating, or too many connected devices. Restarting or upgrading the router often helps.
-        </p>
-        <p>
-          <strong>Q5:</strong> Is 2.4 GHz or 5 GHz better for Wi-Fi?<br>
-          <strong>A:</strong> 2.4 GHz covers longer distances but is slower, while 5 GHz is faster with less range—best for high-speed needs nearby.
-        </p>
+   <section id="faq">
+    <div class="container">
+      <h2 class="about-title">FAQs</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Why is my Wi-Fi slow even with high-speed internet?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+          Ans: It could be due to poor router placement, interference from other devices, or outdated equipment.
+          </p>
+        </div>
       </div>
-    </section>
+
+      <div class="faq-item">
+        <button class="faq-question">
+         Where should I place my Wi-Fi router?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Ans: Place it in the center of your home, elevated, and away from walls, microwaves, or TVs.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+         How can I improve my Wi-Fi speed at home?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Ans: Update router firmware, switch to a modern router (Wi-Fi 6/6E), use mesh systems, or hardwire heavy devices.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+       Why does my Wi-Fi drop frequently
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Ans: This may happen due to interference, overheating, or too many connected devices. Restarting or upgrading the router often helps.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+        Is 2.4 GHz or 5 GHz better for Wi-Fi?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Ans: Is 2.4 GHz or 5 GHz better for Wi-Fi?</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+         How can I improve my Wi-Fi speed at home?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Ans: Update router firmware, switch to a modern router (Wi-Fi 6/6E), use mesh systems, or hardwire heavy devices.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+         How can I improve my Wi-Fi speed at home?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Ans: Update router firmware, switch to a modern router (Wi-Fi 6/6E), use mesh systems, or hardwire heavy devices.</p>
+        </div>
+      </div>
+
+      
+    </div>
+  </section>
+
 
   </main>
 

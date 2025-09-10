@@ -1,3 +1,7 @@
+
+
+// ##########################################################################
+
 const drawer = document.getElementById('mobile-drawer');
 const hamburger = document.getElementById('hamburger');
 const scrim = drawer.querySelector('.drawer__scrim');
@@ -176,6 +180,8 @@ const notif = document.querySelector(".notification");
 setInterval(() => {
   notif.style.visibility = notif.style.visibility === "hidden" ? "visible" : "hidden";
 }, 800);
+
+
 
 
 

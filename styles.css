@@ -11,6 +11,15 @@
   --cta-primary: linear-gradient(90deg, var(--brand), var(--fg));
 }
 
+
+
+
+
+
+
+
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -28,6 +37,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 
 /* Header */
 .header {
@@ -474,270 +484,199 @@ section p {
 
 
 /* Blogs Section */
+/* Blog Section */
 #blogs {
   padding: 4rem 2rem;
-  background: #F0F0F0;
+  background: #f9f9f9;
+  text-align: center;
 }
 
-/* Header */
-.blogs-header {
-  text-align: center;
+.blog-title {
+  font-size: 2.5rem;
   margin-bottom: 2rem;
-}
-.blogs-header h2 {
-  font-size: 2.2rem;
   font-weight: bold;
   color: #222;
-}
-.underline {
-  width: 70px;
-  height: 3px;
-  background-color: #3A89A8;
-  margin: 0.5rem auto 0;
-  border-radius: 3px;
-}
-
-/* Wrapper */
-.blogs-wrapper {
-  max-width: 1200px;   /* ✅ Limit section width */
-  margin: 0 auto;      /* ✅ Center inside page */
-  overflow: hidden;    /* ✅ Keep cards inside */
-}
-
-/* Carousel Container */
-.carousel-container {
   position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  overflow: hidden; /* ✅ Prevent overflow */
 }
 
-/* Carousel Track */
-.blogs-carousel {
-  display: flex;
-  gap: 1.2rem;
-  flex: 1;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 0.5rem 0;
-  scrollbar-width: none; /* Firefox */
-}
-.blogs-carousel::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
-}
-
-/* Arrows */
-.carousel-btn {
-  background: none;
-  border: none;
-  font-size: 2.5rem;
-  cursor: pointer;
-  color: #000;
-  z-index: 2;
-  padding: 0 10px;
-  transition: 0.3s;
-}
-.carousel-btn:hover {
-  color: #3A89A8;
-}
-
-/* Blog Card */
-.blog-card {
-  flex: 0 0 auto;
-  width: 280px; 
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-.blog-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
-.blog-content {
-  padding: 1rem;
-}
-.blog-category {
+.blog-title::after {
+  content: "";
   display: block;
-  font-size: 0.8rem;
-  color: #3A89A8;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-.blog-card h3 {
-  font-size: 1.05rem;
-  margin-bottom: 0.5rem;
-  color: #333;
-  line-height: 1.4;
-}
-.blog-card p {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.blog-link {
-  font-size: 0.9rem;
-  color: #3A89A8;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.2s ease;
-}
-.blog-link:hover {
-  text-decoration: underline;
-  color: #3A89A8;
-}
-.blog-card:hover {
-  transform: scale(1.06);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .blog-card {
-    width: 240px;
-  }
-  .blog-card img {
-    height: 140px;
-  }
-}
-
-/* Team Section */
-/* Team Section */
-#team {
-  padding: 4rem 2rem;
-  background: #f0f0f0;
-}
-
-/* Header */
-.team-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.team-header h2 {
-  font-size: 2.2rem;
-  font-weight: bold;
-  color: #222;
-}
-.team-underline {
-  width: 70px;
-  height: 3px;
-  background-color: #3A89A8;
+  width: 80px;
+  height: 4px;
   margin: 0.5rem auto 0;
-  border-radius: 3px;
+  background-color: #3a89a8;
+  border-radius: 2px;
 }
 
-/* Wrapper */
-.team-wrapper {
-  max-width: 1200px;   /* ✅ Keeps inside page */
-  margin: 0 auto;      /* ✅ Center align */
-  overflow: hidden;    /* ✅ Prevent overflow */
-}
-
-/* Carousel Container */
-.team-carousel-container {
-  position: relative;
+/* Container */
+.blog-container {
   display: flex;
-  align-items: center;
-  width: 100%;
-  overflow: hidden;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Carousel Track */
-.team-carousel {
-  display: flex;
-  gap: 1.2rem;
+/* Card */
+.blog-card {
   flex: 1;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 0.5rem 0;
-  scrollbar-width: none; /* Firefox */
-}
-.team-carousel::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
-}
-
-/* Arrows */
-.team-carousel-btn {
-  background: none;
-  border: none;
-  font-size: 2.5rem;
-  cursor: pointer;
-  color: #000;
-  z-index: 2;
-  padding: 0 10px;
-  transition: 0.3s;
-}
-.team-carousel-btn:hover {
-  color: #3A89A8;
-}
-
-/* Team Card */
-/* Team Card with Full Image */
-.team-card {
-  flex: 0 0 auto;
-  width: 280px; 
-  background: #fff;
+  min-width: 300px;
+  max-width: 350px;
+  background: #ffffff;
   border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
   display: flex;
   flex-direction: column;
 }
 
-/* Image fills top portion */
-.team-card img {
+/* Full image on top */
+.blog-img {
   width: 100%;
-  height: 100%;
+  height: 200px;
   object-fit: cover;
-  flex-grow: 1;   /* ✅ makes image take full available space */
-  border-bottom: 1px solid #eee;
 }
 
-/* Text content */
-.team-info {
-  padding: 1rem;
+/* Card content */
+.blog-content {
+  padding: 1.5rem;
+  text-align: left;
 }
-.team-info h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: #333;
+
+.blog-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #3a89a8;
+}
+
+.blog-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Read more link */
+.blog-link {
+  display: inline-block;
+  margin-top: 1rem;
   font-weight: bold;
-}
-.team-info a {
-  font-size: 0.9rem;
-  color: #3A89A8;
+  color: #3a89a8;
   text-decoration: none;
+  transition: color 0.3s;
+}
+.blog-link:hover {
+  color: #1b2839;
+}
+
+/* Team Section */
+#team {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.team-title {
+  font-size: 2.5rem;
   font-weight: bold;
-  transition: color 0.2s ease;
-}
-.team-info a:hover {
-  text-decoration: underline;
-  color: #3A89A8;
+  color: #222;
 }
 
-/* Hover effect */
+.team-underline {
+  width: 80px;
+  height: 4px;
+  margin: 0.8rem auto 2rem;
+  background-color: #3a89a8;
+  border-radius: 2px;
+}
+/* Team Grid - Bigger Container */
+.team-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2.5rem; /* more spacing between cards */
+  flex-wrap: wrap;
+  max-width: 1400px;   /* ⬅️ increased from 1200px */
+  margin: 0 auto;
+  padding: 0 2rem;     /* adds spacing inside container */
+}
+
+/* Team Card - Bigger */
+.team-card {
+  flex: 1;
+  min-width: 300px;   /* ⬅️ was 250px */
+  max-width: 400px;   /* ⬅️ was 300px */
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;  /* more inner space */
+}
+
+/* Bigger Team Image */
+.team-img {
+  width: 180px;   /* was 150px */
+  height: 180px;  /* was 150px */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.2rem;
+}
+
 .team-card:hover {
-  transform: scale(1.06);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+/* Bigger Team Image */
+.team-img {
+  width: 180px;   /* was 150px */
+  height: 180px;  /* was 150px */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.2rem;
+}
+/* Team Info */
+.team-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+  color: #333;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .team-card {
-    width: 220px;
-  }
+.team-role {
+  font-size: 1rem;
+  color: #3a89a8;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
+.team-desc {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
 
-/* Contact Sections */
+.team-info a {
+  color: #3a89a8;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.team-info a:hover {
+  color: #1b2839;
+}
 
 /* Contact Section */
 #contact {
@@ -748,9 +687,16 @@ section p {
 .contact-container {
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+
 }
 
 /* Left Info Card */
@@ -786,66 +732,93 @@ section p {
 
 /* Right Form Card */
 .contact-form {
-  background: #F0F0F0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers form horizontally */
+  justify-content: center;
+  text-align: center;    /* centers text inside labels & headings */
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background:#F0F0F0;
+  border-radius:12px;
 }
+
+.contact-form .form-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #222;
+}
+
 .contact-form form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: 100%;
+  max-width: 500px;   /* ⬅️ keep it neat */
+  margin: 0 auto;
 }
+
 .contact-form label {
   font-weight: 600;
   font-size: 0.95rem;
 }
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
+  max-width: 400px;   /* ⬅️ inputs not too wide */
+  margin: 0 auto;     /* ⬅️ centers input box */
   padding: 0.8rem;
   border: 1px solid #ddd;
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  display: block;
 }
+
 .contact-form small {
   color: #777;
   font-size: 0.8rem;
+  text-align: center;
+  display: block;
 }
+
 .contact-form button {
   background: #3A89A8;
   color: #fff;
   border: none;
-  padding: 0.9rem;
+  padding: 0.9rem 1.5rem;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s;
-}
-.contact-form button:hover {
-  background: #07d49a;
+  max-width: 200px;   /* ⬅️ smaller button */
+  margin: 0 auto;     /* ⬅️ center button */
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .contact-container {
-    grid-template-columns: 1fr;
-  }
+.contact-form button:hover {
+  background: #07d49a;
 }
 
 
 
 /* Demo Section */
 
-
-
-#demo{
+#demo {
   padding: 4rem 2rem;
-  background:#F0F0F0;
+  background: #F0F0F0;
 }
+
+.demo-grid {
+  display: flex;
+  flex-wrap: wrap;        /* ✅ keeps content inside */
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .form-container {
-  max-width: 1100px;
-  margin: auto;
+  flex: 1 1 400px;        /* ✅ responsive */
+  max-width: 600px;       /* ✅ prevent overflow */
   background: #fff;
   padding: 25px;
   border-radius: 10px;
@@ -862,14 +835,6 @@ h1 {
   color: #555;
   margin-bottom: 20px;
 }
-
-.demo-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  align-items: start;
-}
-
 
 .demo-form {
   display: flex;
@@ -942,21 +907,152 @@ textarea {
 
 /* Video side */
 .video-container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .video-container iframe {
-     
-      width: 600px;
-      height: 525px;
-      border-radius: 10px;
-      border: none;
-    }
-    
+  flex: 1 1 400px;        /* ✅ responsive */
+  max-width: 600px;       /* ✅ prevent overflow */
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.video-container iframe {
+  width: 100%;            /* ✅ fit parent */
+  height: 315px;          /* ✅ good default height */
+  border-radius: 10px;
+  border: none;
+}
 
 /* Responsive */
+@media (max-width: 992px) {
+  .form-row {
+    grid-template-columns: 1fr; /* ✅ stack inputs */
+  }
+}
+
 @media (max-width: 768px) {
   .demo-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column; /* ✅ stacked like mobile */
   }
+  .video-container iframe {
+    height: 250px; /* ✅ smaller video on mobile */
+  }
+}
+
+
+
+/* FAQs Section */
+
+
+
+.faq {
+  max-width: 700px;
+  margin: auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 15px 0;
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question .icon {
+  font-size: 18px;
+  margin-left: 50px;
+  transition: transform 0.3s;
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 0 15px 0;
+  font-size: 25px;
+  color: black;
+  text-align: start;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+.view-more {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.view-more button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Whatspp popups */
+
+
+.whatsapp-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.chat-btn {
+  display: flex;
+  align-items: center;
+  background: #25d366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.chat-btn:hover {
+  transform: scale(1.05);
+}
+
+.chat-btn img {
+  width: 28px;
+  height: 28px;
+  margin-left: 10px;
+}
+
+.notification {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 4px 7px;
 }

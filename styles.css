@@ -37,6 +37,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
+  height: 65px;
   z-index: 1000;    /* higher than background */
   background: #fff; /* optional semi-transparent */
 }
@@ -116,6 +117,12 @@ a {
 /* keep line when clicked/active */
 .menu a.active::after {
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .menu {
+    display: flex;   /* ✅ flex instead of none */
+  }
 }
 
 /* .btn-demo {
@@ -424,6 +431,8 @@ section p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   line-height: 1.5;
+  text-align: center;
+  margin-left: 40px;
 }
 
 .hero-buttons {
@@ -431,7 +440,9 @@ section p {
   justify-content: center;
   gap: 1rem;
 }
-
+.btn-primary{
+ margin-right: 100px;
+}
 .btn-primary,
 .btn-secondary {
   padding: 0.9rem 2rem;
@@ -441,6 +452,7 @@ section p {
   color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
+ 
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
 }
@@ -741,24 +753,47 @@ section p {
 
 /* Contact Section */
 #contact {
-  padding: 4rem 2rem;
+  /* padding: 3rem 2rem; */
   background: #FFFFFF;
 }
 
-.contact-container {
-  max-width: 1200px;
-  margin: 0 auto;
+.contact-title {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+    font-weight: bold;
+    color: #222;
+    position: relative;
+}
+
+.contact-underline {
+  width: 80px;
+  height: 4px;
+  margin: 0.8rem auto 2rem;
+  background-color: #3a89a8;
+  border-radius: 2px;
+}
+.contact-grid {
   display: flex;
-  flex-direction: column;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  overflow-x: auto;
-  scroll-behavior: smooth;
+  flex-wrap: wrap;        /* ✅ keeps content inside */
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contact-container {
+ display: grid;
+  flex-wrap: wrap;  
+  grid-template-columns: 1fr; /* ✅ equal size */
   gap: 20px;
-  padding: 20px;
-  scroll-snap-type: x mandatory;
+ 
+ justify-content: center;
+  align-items: flex-start;
+ 
 
 }
+
+
 
 /* Left Info Card */
 .form-title {
@@ -770,10 +805,13 @@ section p {
 }
 
 .contact-info {
-  background: #F0F0F0;
-  padding: 2rem;
+   background: #F0F0F0;
   border-radius: 12px;
+  padding: 2rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .contact-info h2 {
   font-size: 1.6rem;
@@ -784,7 +822,13 @@ section p {
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   font-weight: bold;
-  color: #d32f2f;
+  text-align:start ;
+  color: black;
+}
+.contact-info a{
+  color: rgb(41, 40, 40);
+  font-weight: 500;
+  font-size: 17px;
 }
 .contact-info p {
   color: #444;
@@ -861,24 +905,54 @@ section p {
 }
 
 
+/* 📟 Tablet / Small Desktop (split view) */
+@media (min-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr 1fr; /* ✅ equal split */
+  }
+}
+
+/* 🖥️ Large Desktop */
+@media (min-width: 1200px) {
+  .contact-container {
+    grid-template-columns: 1fr 1fr; /* stays split but larger */
+  }
+}
+
 
 /* Demo Section */
 
 #demo {
-  padding: 4rem 2rem;
+  /* padding: 4rem 2rem; */
   background: #F0F0F0;
 }
-
+.demo-title {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+    font-weight: bold;
+    color: #222;
+    position: relative;
+}
+.demo-underline {
+  width: 80px;
+  height: 4px;
+  margin: 0.8rem auto 2rem;
+  background-color: #3a89a8;
+  border-radius: 2px;
+}
 .demo-grid {
   display: flex;
   flex-wrap: wrap;        /* ✅ keeps content inside */
   gap: 30px;
+  
   justify-content: center;
   align-items: flex-start;
 }
 
 .form-container {
-  flex: 1 1 400px;        /* ✅ responsive */
+  flex: 1 1 400px;
+         /* ✅ responsive */
   max-width: 600px;       /* ✅ prevent overflow */
   background: #fff;
   padding: 25px;
@@ -889,12 +963,14 @@ section p {
 h1 {
   font-size: 28px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .subheadline {
   font-size: 16px;
   color: #555;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .demo-form {
@@ -954,31 +1030,32 @@ textarea {
   color: #666;
   margin-top: 5px;
 }
-
 .success-message {
-  display: none;
-  margin-top: 20px;
-  padding: 15px;
-  background: #e6ffed;
-  border: 1px solid #34d399;
-  border-radius: 6px;
-  color: #065f46;
-  font-size: 14px;
-}
+    display: none;              /* hidden by default */
+    margin-top: 20px;
+    padding: 15px;
+    background: #e6ffed;
+    border: 1px solid #34d399;
+    border-radius: 6px;
+    color: #065f46;
+    font-size: 14px;
+  }
 
 /* Video side */
 .video-container {
   flex: 1 1 400px;        /* ✅ responsive */
   max-width: 600px;       /* ✅ prevent overflow */
+  width: 100%;            /* ✅ fill parent instead of fixed 900px */
   background: #fff;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-sizing: border-box; /* ✅ ensures padding stays inside width */
 }
 
 .video-container iframe {
-  width: 100%;            /* ✅ fit parent */
-  height: 315px;          /* ✅ good default height */
+  width: 100%;            /* ✅ fluid video */
+  aspect-ratio: 16 / 9;   /* ✅ keeps proportions automatically */
   border-radius: 10px;
   border: none;
 }
@@ -995,80 +1072,152 @@ textarea {
     flex-direction: column; /* ✅ stacked like mobile */
   }
   .video-container iframe {
-    height: 250px; /* ✅ smaller video on mobile */
+    height: 300px; /* ✅ let aspect-ratio handle size */
+  }
+}
+
+/* 🖥️ Desktop View */
+@media (min-width: 1200px) {
+  .demo-grid {
+    flex-direction: row;   /* ✅ side by side */
+    align-items: stretch;  /* ✅ equal heights */
+  }
+
+  .form-container,
+  .video-container {
+    flex: 1 1 50%;         /* ✅ each takes half space */
+    max-width: 600px;      /* ✅ prevents extra wide stretch */
+  }
+
+  .video-container iframe {
+    height: 100%;          /* ✅ fills container height */
+    min-height: 400px;     /* ✅ reasonable min height */
+    border-radius: 10px;
   }
 }
 
 
+/* 📱 Mobile (default) */
+.demo-grid {
+  display: flex;
+  flex-direction: column;  /* stacked */
+  gap: 20px;
+}
+
+.form-container,
+.video-container {
+  width: 100%;             /* full width on mobile */
+  max-width: 100%;
+}
+
+/* 📟 Tablet (768px–1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .demo-grid {
+    flex-direction: row;   /* side by side */
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .form-container,
+  .video-container {
+    flex: 1 1 48%;         /* each takes ~half screen */
+    max-width: 550px;
+  }
+
+  .video-container iframe {
+    aspect-ratio: 16 / 9;  /* responsive video */
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* 🖥️ Desktop (≥1200px) */
+@media (min-width: 1200px) {
+  .demo-grid {
+    flex-direction: row;   
+    align-items: stretch;  /* equal height */
+    gap: 30px;
+  }
+
+  .form-container,
+  .video-container {
+    flex: 1 1 50%;         /* exactly half width */
+    max-width: 600px;
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: 100%;          /* fill height */
+    min-height: 500px;     /* safeguard */
+    border-radius: 10px;
+  }
+}
 
 /* FAQs Section */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
-
-
-.faq {
-  max-width: 700px;
-  margin: auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+body{
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
 }
-h2 {
+.faq-title {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+    font-weight: bold;
+    color: #222;
+    position: relative;
+}
+.faq-underline {
+  width: 80px;
+  height: 4px;
+  margin: 0.8rem auto 2rem;
+  background-color: #3a89a8;
+  border-radius: 2px;
+}
+.container h1{
+  color: Black;
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 22px;
 }
 
-.faq-item {
-  border-bottom: 1px solid #ddd;
-}
-
-.faq-question {
-  width: 100%;
-  background: none;
-  border: none;
-  text-align: left;
-  padding: 15px 0;
-  font-size: 22px;
-  font-weight: 500;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.faq-question .icon {
-  font-size: 18px;
-  margin-left: 50px;
-  transition: transform 0.3s;
-}
-
-.faq-answer {
-  display: none;
-  padding: 0 0 15px 0;
-  font-size: 25px;
+details{
+  background-color: #F0F0F0;
+  margin: 8px;
   color: black;
+  font-size: 1.5rem;
+  border-radius:12px;
   text-align: start;
 }
 
-.faq-answer p {
-  margin: 0;
+summary {
+  padding: .5em 1.3rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;  
+  transition: height 1s ease;
 }
 
-.view-more {
-  text-align: center;
-  margin-top: 20px;
+summary::-webkit-details-marker {
+  display: none;
 }
 
-.view-more button {
-  padding: 10px 20px;
-  font-size: 14px;
-  background: black;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+summary:after{
+  content: "\002B";
 }
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+}
+
+details[open] summary:after{
+  content: "\00D7";
+}
+
+details[open] div{
+  padding: .5em 1em;
+}
+
 
 /* Whatspp popups */
 

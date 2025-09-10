@@ -12,14 +12,6 @@
 }
 
 
-
-
-
-
-
-
-
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -219,23 +211,60 @@ a {
     box-shadow: 0 2px 6px rgba(232, 228, 228, 0.15);
   }
 }
-
-.hamburger {
+.header {
   display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes logo left & hamburger right */
+  padding: 10px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none; /* hidden on desktop by default */
   flex-direction: column;
   justify-content: space-between;
   width: 28px;
   height: 20px;
   background: none;
-  margin-left: 300px;
   border: none;
   cursor: pointer;
 }
+
+/* Hamburger lines */
 .hamburger span {
   display: block;
   height: 3px;
+  width: 100%;
   background: black;
   border-radius: 2px;
+}
+
+/* Mobile view (≤768px) */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Tablet (769px–1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Desktop (>1024px) */
+@media (min-width: 1025px) {
+  .hamburger {
+    display: none;
+  }
 }
 
 .drawer {
@@ -280,39 +309,65 @@ a {
 
 /* Sections */
 
+/* Base (Mobile First: ≤768px) */
 section {
   min-height: 100vh;
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;        /* smaller padding */
   display: flex;
-  flex-direction: column;
+  flex-direction: column;    /* stack vertically */
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-/* section:nth-child(even) {
-  background: var(--section-alt);
-} */
+
 section h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;         /* smaller heading */
   margin-bottom: 1rem;
 }
+
 section p {
-  max-width: 600px;
-  /* color: var(--muted); */
-
+  max-width: 90%;            /* nearly full width on mobile */
+  font-size: 0.95rem;
 }
 
-@media (min-width: 860px) {
-  .menu {
-    display: flex;
+/* Tablet / Split View (769px – 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  section {
+    padding: 3rem 2rem;
+    flex-direction: row;     /* side by side layout */
+    text-align: left;
+    gap: 2rem;
   }
-  .hamburger {
-    display: none;
+
+  section h2 {
+    font-size: 2rem;
   }
-  .drawer {
-    display: none;
+
+  section p {
+    max-width: 500px;
+    font-size: 1rem;
   }
 }
+
+/* Desktop (≥1025px) */
+@media (min-width: 1025px) {
+  section {
+    padding: 4rem 6rem;      /* more breathing space */
+    flex-direction: row;     /* side by side */
+    text-align: left;
+    gap: 3rem;
+  }
+
+  section h2 {
+    font-size: 2.5rem;
+  }
+
+  section p {
+    max-width: 600px;
+    font-size: 1.1rem;
+  }
+}
+
 
 /* Footer */
 
@@ -498,7 +553,11 @@ section p {
   color: #222;
   position: relative;
 }
-
+.blog-title h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
 .blog-title::after {
   content: "";
   display: block;
@@ -586,8 +645,10 @@ section p {
 
 .team-title {
   font-size: 2.5rem;
-  font-weight: bold;
-  color: #222;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color: #222;
+    position: relative;
 }
 
 .team-underline {
@@ -952,7 +1013,6 @@ textarea {
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-
 h2 {
   text-align: center;
   margin-bottom: 20px;

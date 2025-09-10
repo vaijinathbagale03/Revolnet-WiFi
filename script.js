@@ -153,3 +153,44 @@ document.getElementById("demoForm").addEventListener("submit", function(e) {
   document.getElementById("successMessage").style.display = "block";
   this.reset();
 });
+
+
+// FAQs section
+
+const questions = document.querySelectorAll(".faq-question");
+
+questions.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const item = btn.parentElement;
+    const answer = item.querySelector(".faq-answer");
+    const icon = btn.querySelector(".icon");
+
+    // Close other open FAQs
+    document.querySelectorAll(".faq-answer").forEach(el => {
+      if (el !== answer) el.style.display = "none";
+    });
+    document.querySelectorAll(".faq-question .icon").forEach(ic => {
+      if (ic !== icon) ic.textContent = "+";
+    });
+
+    // Toggle current
+    if (answer.style.display === "block") {
+      answer.style.display = "none";
+      icon.textContent = "+";
+    } else {
+      answer.style.display = "block";
+      icon.textContent = "−";
+    }
+  });
+});
+
+
+// WhatsApp popups
+
+// Optional JS for blinking notification
+const notif = document.querySelector(".notification");
+
+setInterval(() => {
+  notif.style.visibility = notif.style.visibility === "hidden" ? "visible" : "hidden";
+}, 800);
+

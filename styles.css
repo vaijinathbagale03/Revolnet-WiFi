@@ -10,8 +10,229 @@
   --header-h: 64px;
   --cta-primary: linear-gradient(90deg, var(--brand), var(--fg));
 }
+/* ######################################################### */
+:root {
+  --bg: #ffffff;
+  --fg: #1b2839;
+  --muted: #3a89a8;
+  --brand: #3a89a8;
+  --brand-hover: #1b2839;
+  --brand-contrast: #ffffff;
+  --section-alt: #aad4de;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --header-h: 64px;
+}
+
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+    position: sticky;
+}
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+   
+}
+body.lock-scroll {
+  overflow: hidden;
+  position: relative;
+}
 
 
+/* LAYOUT CONTAINERS */
+.container {
+  width: 100%;
+  max-width: 1200px; /* desktop max width */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--bg);
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  box-shadow: 0 2px 6px var(--shadow);
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--brand);
+}
+
+.menu {
+  display: none;
+  gap: 1rem;
+}
+
+.menu a {
+  position: relative;
+  padding: 0.5rem 0.75rem;
+  color: var(--fg);
+  transition: color 0.3s ease-in-out;
+}
+
+.menu a:hover,
+.menu a.active {
+  color: var(--brand);
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: var(--brand);
+  transition: width 0.3s ease;
+}
+.menu a:hover::after,
+.menu a.active::after {
+  width: 100%;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.hamburger span {
+  height: 3px;
+  width: 28px;
+  background: var(--fg);
+  border-radius: 2px;
+}
+
+/* DRAWER (MOBILE MENU) */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100%;
+  width: 70%;
+  max-width: 320px;
+  background: var(--bg);
+  box-shadow: -2px 0 8px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  gap: 1rem;
+  transition: right 0.3s ease-in-out;
+}
+.drawer.active {
+  right: 0;
+}
+.drawer a {
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.drawer a:hover {
+  background: var(--section-alt);
+}
+
+/* SECTIONS (MOBILE FIRST) */
+section {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+section p {
+  max-width: 90%;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* FOOTER */
+.site-footer {
+  background: #333;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* ============= TABLET VIEW (≥768px) ============= */
+@media (min-width: 768px) {
+  .menu {
+    display: flex;
+  }
+  .hamburger {
+    display: none;
+  }
+
+  section {
+    flex-direction: row;
+    text-align: left;
+    gap: 2rem;
+  }
+  section h2 {
+    font-size: 2rem;
+  }
+  section p {
+    max-width: 500px;
+  }
+}
+
+/* ============= DESKTOP VIEW (≥1025px) ============= */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1200px;
+  }
+  section {
+    padding: 4rem 6rem;
+    gap: 3rem;
+  }
+  section h2 {
+    font-size: 2.5rem;
+  }
+  section p {
+    max-width: 600px;
+    font-size: 1.1rem;
+  }
+}
+
+/* ============= WIDE DESKTOP (≥1440px) ============= */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+  }
+  section {
+    padding: 5rem 8rem;
+  }
+}
+
+/* ####################################################################################################################### */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -24,6 +245,7 @@ body {
   font-family: 'Segoe UI', Roboto, sans-serif;
   color: var(--fg);
   background: #ffffff;
+  
 }
 a {
   text-decoration: none;
@@ -222,7 +444,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between; /* pushes logo left & hamburger right */
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
 }
 
 .logo {
@@ -319,7 +541,7 @@ a {
 /* Base (Mobile First: ≤768px) */
 section {
   min-height: 100vh;
-  padding: 2rem 1rem;        /* smaller padding */
+  /* padding: 2rem 1rem;        smaller padding */
   display: flex;
   flex-direction: column;    /* stack vertically */
   align-items: center;
@@ -437,12 +659,11 @@ section p {
 
 .hero-buttons {
   display: flex;
+  flex-wrap:wrap ;
   justify-content: center;
   gap: 1rem;
 }
-.btn-primary{
- margin-right: 100px;
-}
+
 .btn-primary,
 .btn-secondary {
   padding: 0.9rem 2rem;
@@ -452,7 +673,8 @@ section p {
   color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
- 
+ display: flex;
+ flex-wrap:wrap ;
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
 }

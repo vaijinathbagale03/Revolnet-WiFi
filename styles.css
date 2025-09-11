@@ -9,6 +9,19 @@
   --shadow: rgba(0, 0, 0, 0.1);
   --header-h: 64px;
   --cta-primary: linear-gradient(90deg, var(--brand), var(--fg));
+
+
+  
+  /* layout + type scale (mobile-first) */
+  --container-max: 1200px;
+  --fs-xxs: 0.78rem; /* very small phones */
+  --fs-xs: 0.9rem;
+  --fs-sm: 1rem;
+  --fs-md: 1.05rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.9rem;
+  --btn-padding: 0.9rem 1.6rem;
+  --radius: 8px;
 }
 /* ######################################################### */
 :root {
@@ -24,13 +37,9 @@
 }
 
 /* GLOBAL RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 html {
-  scroll-behavior: smooth;
+
     position: sticky;
 }
 body {
@@ -598,27 +607,7 @@ section p {
 }
 
 
-/* Footer */
 
-.site-footer {
-  background: #333;
-  color: #f1f1f1;
-  padding: 1.5rem 1rem;
-  text-align: center;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-.site-footer a {
-  color: #aad4de;
-  text-decoration: none;
-}
-.site-footer a:hover {
-  text-decoration: underline;
-}
-.footer-container {
-  max-width: 900px;
-  margin: 0 auto;
-}
 
 /*  Home Section */
 .home {
@@ -1487,3 +1476,362 @@ details[open] div{
   border-radius: 50%;
   padding: 4px 7px;
 }
+
+
+
+/* Service section */
+
+ :root {
+      --brand:#3A89A8;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin:0;
+      background:#f5f5f5;
+      color:#222;
+    }
+
+    /* Section Base */
+    .services {
+      background:#fff;
+      padding:4rem 1.5rem;
+      text-align:center;
+    }
+    .services-title {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+    font-weight: bold;
+    color: #222;
+    position: relative;
+}
+.services-underline {
+  width: 80px;
+  height: 4px;
+  margin: 0.8rem auto 2rem;
+  background-color: #3a89a8;
+  border-radius: 2px;
+}
+    .services h2 {
+      font-size:clamp(1.6rem,4vw,2.2rem);
+      margin-bottom:.5rem;
+      color:#222;
+      
+    }
+    .head{
+      text-align: center;
+    }
+    .services-subtitle {
+      font-size:1rem;
+      font-weight: 200;
+      padding-top: 15px;
+      color:#555;
+      margin-bottom:2rem;
+    
+       text-align: center;
+    }
+
+    /* Wrapper controls layout */
+    .services-wrapper {
+      display:flex;
+      flex-direction:column;
+      gap:2rem;
+    }
+
+    /* Cards Grid */
+    .services-grid {
+      display:grid;
+      grid-template-columns:1fr;
+      gap:1.5rem;
+    }
+    .service-card {
+      background:#fff;
+      border-radius:12px;
+      padding:2rem 1.5rem;
+      box-shadow:0 4px 12px rgba(0,0,0,.06);
+      transition:transform .25s ease, box-shadow .25s ease;
+    }
+    .service-card:hover {
+      transform:translateY(-6px);
+      box-shadow:0 8px 24px rgba(0,0,0,.08);
+    }
+    .service-card .icon {
+      font-size:2.5rem;
+      margin-bottom:1rem;
+    }
+    .service-card h3 {
+      font-size:1.25rem;
+      font-weight:700;
+      color:var(--brand);
+      margin-bottom:.5rem;
+    }
+    .service-card p {
+      font-size:1rem;
+      margin-bottom:1rem;
+      color:#333;
+    }
+    .btn.secondary {
+      border:1px solid var(--brand);
+      background:transparent;
+      color:var(--brand);
+      padding:.6rem 1.2rem;
+      font-size:.95rem;
+      border-radius:8px;
+      cursor:pointer;
+      transition:.3s;
+    }
+    .btn.secondary:hover {
+      background:var(--brand);
+      color:#fff;
+    }
+
+    /* Video */
+    .video iframe {
+     width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-bottom:1rem;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    }
+
+    /* Responsive grid for cards */
+    @media (min-width:600px){
+      .services-grid { grid-template-columns:repeat(2,1fr); }
+    }
+    @media (min-width:768px){
+      .services-grid { grid-template-columns:repeat(3,1fr); }
+    }
+
+    /* Desktop Split Layout */
+    @media (min-width:992px){
+      .services {
+        text-align:left;
+      }
+      .services-wrapper {
+        flex-direction:row;
+        align-items:center;
+      }
+      .services-grid {
+        flex:1;
+        grid-template-columns:1fr; /* keep vertical stack of cards */
+      }
+      .video {
+        flex:1;
+      }
+    }
+
+    @media (min-width:1200px){
+      .services { padding:6rem 2rem; }
+      .service-card { padding:2.5rem 2rem; }
+    }
+
+
+    /* Service Card Images */
+.service-card .card-img {
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-bottom:1rem;
+}
+
+/* Grid Layout */
+.services-grid {
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.5rem;
+}
+
+/* Tablet: 2 cards per row */
+@media (min-width:600px){
+  .services-grid { grid-template-columns:repeat(2,1fr); }
+}
+
+/* Desktop: 3 cards per row */
+@media (min-width:992px){
+  .services-grid { grid-template-columns:repeat(3,1fr); }
+  .video {
+    max-width: 500px;        /* controls the box */
+    margin: 2rem auto;
+    padding: 0;
+  }
+
+  .video iframe {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/* ===== FOOTER ===== */
+.footer {
+  background: #1b1b1b;
+  color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  padding-top: 3rem;
+}
+
+/* Container Layout */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem 2rem;
+}
+
+/* Column Titles */
+.footer-column h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+/* Links */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #bbbbbb;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #3a89a8; /* Brand color on hover */
+}
+
+/* Logo + Tagline */
+.footer-logo {
+  width: 150px;
+  
+  margin-bottom: 0.8rem;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  color: #ccc;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Social Links */
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #bbbbbb;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #3a89a8;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Bottom Strip */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 1rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+  }
+
+  .footer-social a {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Social links with icons */
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #bbbbbb; /* default muted color */
+  transition: color 0.3s ease;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  transition: fill 0.3s ease;
+}
+
+/* === Brand Colors on Hover === */
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #bbbbbb;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  transition: fill 0.3s ease;
+  fill: currentColor;
+}
+
+/* Brand Colors on Hover */
+.footer-social a:nth-child(1):hover { color: #0A66C2; } /* LinkedIn */
+.footer-social a:nth-child(2):hover { color: #FF0000; } /* YouTube */
+.footer-social a:nth-child(3):hover { color: #1877F2; } /* Facebook */
+.footer-social a:nth-child(4):hover { color: #1DA1F2; } /* Twitter */
+.footer-social a:nth-child(5):hover { color: #E4405F; } /* Instagram */
+
+

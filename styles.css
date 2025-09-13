@@ -1364,71 +1364,6 @@ textarea {
   }
 }
 
-/* FAQs Section */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-
-body{
-  background-color: #fff;
-  font-family: 'Open Sans', sans-serif;
-}
-.faq-title {
-  font-size: 2.5rem;
-  margin-top: 2rem;
-    /* margin-bottom: 2rem; */
-    font-weight: bold;
-    color: #222;
-    position: relative;
-}
-.faq-underline {
-  width: 80px;
-  height: 4px;
-  margin: 0.8rem auto 2rem;
-  background-color: #3a89a8;
-  border-radius: 2px;
-}
-.container h1{
-  color: Black;
-  text-align: center;
-}
-
-details{
-  background-color: #F0F0F0;
-  margin: 8px;
-  color: black;
-  font-size: 1.5rem;
-  border-radius:12px;
-  text-align: start;
-}
-
-summary {
-  padding: .5em 1.3rem;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;  
-  transition: height 1s ease;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-summary:after{
-  content: "\002B";
-}
-
-details[open] summary {
-    border-bottom: 1px solid #aaa;
-    margin-bottom: .5em;
-}
-
-details[open] summary:after{
-  content: "\00D7";
-}
-
-details[open] div{
-  padding: .5em 1em;
-}
-
 
 /* Whatspp popups */
 
@@ -1445,8 +1380,8 @@ details[open] div{
   align-items: center;
   background: #25d366;
   color: white;
-  padding: 12px 18px;
-  border-radius: 50px;
+  padding: 1px 8px;
+  border-radius: 100px;
   font-size: 16px;
   font-weight: bold;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -1461,6 +1396,7 @@ details[open] div{
 
 .chat-btn img {
   width: 28px;
+  
   height: 28px;
   margin-left: 10px;
 }
@@ -1833,5 +1769,6 @@ details[open] div{
 .footer-social a:nth-child(3):hover { color: #1877F2; } /* Facebook */
 .footer-social a:nth-child(4):hover { color: #1DA1F2; } /* Twitter */
 .footer-social a:nth-child(5):hover { color: #E4405F; } /* Instagram */
+
 
 

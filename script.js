@@ -1,7 +1,3 @@
-
-
-// ##########################################################################
-
 const drawer = document.getElementById('mobile-drawer');
 const hamburger = document.getElementById('hamburger');
 const scrim = drawer.querySelector('.drawer__scrim');
@@ -159,18 +155,6 @@ teamPrev.addEventListener("click", () => {
   });
 
 
-  // FQAS
-let answers = document.querySelectorAll(".accordion");
-answers.forEach((event) => {
-    event.addEventListener("click", () => {
-        if (event.classList.contains("active")) {
-            event.classList.remove("active");
-        } else {
-            event.classList.add("active");
-        }
-    });
-});
-
 
 // WhatsApp popups
 
@@ -182,6 +166,14 @@ setInterval(() => {
 }, 800);
 
 
+
+// phone country code
+const phoneInput = document.querySelector("#phone");
+  window.intlTelInput(phoneInput, {
+    initialCountry: "in", // Default country India
+    separateDialCode: true, // Shows country code separately
+    preferredCountries: ["in", "us", "gb"], // Optional: show common ones first
+  });
 
 
 

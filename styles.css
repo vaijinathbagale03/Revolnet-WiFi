@@ -1119,7 +1119,7 @@ section p {
   align-items: center;   /* centers form horizontally */
   justify-content: center;
   text-align: center;    /* centers text inside labels & headings */
-  padding: 2rem;
+  padding: 1.3rem;
   background:#F0F0F0;
   border-radius:12px;
 }
@@ -1835,6 +1835,7 @@ textarea {
 .footer-social a:nth-child(3):hover { color: #1877F2; } /* Facebook */
 .footer-social a:nth-child(4):hover { color: #1DA1F2; } /* Twitter */
 .footer-social a:nth-child(5):hover { color: #E4405F; } /* Instagram */
+
 
 
 

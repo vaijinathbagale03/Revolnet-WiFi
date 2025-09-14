@@ -1,5 +1,3 @@
-
-
 /* General Section Style */
 section {
   padding: 2rem 1rem; /* reduce top & bottom padding */
@@ -1114,14 +1112,13 @@ section p {
 
 /* Right Form Card */
 .contact-form {
+  background: #F0F0F0;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-  align-items: center;   /* centers form horizontally */
   justify-content: center;
-  text-align: center;    /* centers text inside labels & headings */
-  padding: 1.5rem;
-  background:#F0F0F0;
-  border-radius:12px;
 }
 
 .contact-form .form-title {
@@ -1835,7 +1832,6 @@ textarea {
 .footer-social a:nth-child(3):hover { color: #1877F2; } /* Facebook */
 .footer-social a:nth-child(4):hover { color: #1DA1F2; } /* Twitter */
 .footer-social a:nth-child(5):hover { color: #E4405F; } /* Instagram */
-
 
 
 

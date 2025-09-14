@@ -1,3 +1,4 @@
+
 /* General Section Style */
 section {
   padding: 2rem 1rem; /* reduce top & bottom padding */
@@ -1140,8 +1141,9 @@ section p {
 .contact-form label {
   font-weight: 600;
   font-size: 0.95rem;
-     text-align: center;
-}
+
+   text-align: center;
+
 }
 
 .contact-form input,
@@ -1834,6 +1836,7 @@ textarea {
 .footer-social a:nth-child(3):hover { color: #1877F2; } /* Facebook */
 .footer-social a:nth-child(4):hover { color: #1DA1F2; } /* Twitter */
 .footer-social a:nth-child(5):hover { color: #E4405F; } /* Instagram */
+
 
 
 

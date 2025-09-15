@@ -3,8 +3,9 @@ const hamburger = document.getElementById('hamburger');
 const scrim = drawer.querySelector('.drawer__scrim');
 const drawerClose = drawer.querySelector('[data-close]');
 const body = document.body;
-const closeEls = document.querySelectorAll('[data-close]'); // scrim + close button
-  const navLinks = document.querySelectorAll('[data-nav]');
+const closeEls = document.querySelectorAll('[data-close]'); 
+const navLinks = document.querySelectorAll('[data-nav]');
+
 /* Toggle Mobile Menu */
 function toggleMobileMenu() {
   const isOpen = drawer.classList.contains('active');
@@ -69,73 +70,36 @@ document.querySelectorAll(".drawer .dropbtn").forEach(btn => {
   });
 });
 
-/* Smooth Scroll + Close Drawer on Nav */
-document.querySelectorAll('[data-nav]').forEach(a => {
-  a.addEventListener('click', (e) => {
-    const href = a.getAttribute('href');
-    if (href && href.startsWith('#')) {
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        closeDrawer();
+// contact form 
+const form = document.getElementById("contactForm");
+const submitBtn = document.getElementById("submitBtn");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      if (response.ok) {
+        alert("✅ Your message has been sent successfully!");
+        form.reset();
+      } else {
+        alert("❌ Something went wrong. Please try again.");
       }
+    } catch (error) {
+      alert("⚠️ Error: " + error.message);
     }
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Send Message";
   });
-}); 
-
-const slides = document.querySelectorAll('.hero-slider .slide');
-let current = 0;
-
-function changeSlide() {
-  slides[current].classList.remove('active');
-  current = (current + 1) % slides.length;
-  slides[current].classList.add('active');
-}
-
-setInterval(changeSlide, 5000); // Change every 5 seconds
-const carousel = document.getElementById("carousel");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-
-const scrollAmount = 280 + 16;// adjust per blog card width
-
-function toggleButtons() {
-  if (!carousel) return;
-  const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
-  prevBtn.disabled = carousel.scrollLeft <= 0;
-  nextBtn.disabled = carousel.scrollLeft >= maxScrollLeft;
-}
-
-if (carousel && prevBtn && nextBtn) {
-  nextBtn.addEventListener("click", () => {
-    carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
-  });
-
-  prevBtn.addEventListener("click", () => {
-    carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-  });
-
-  // Update button states on scroll
-  carousel.addEventListener("scroll", toggleButtons);
-  window.addEventListener("load", toggleButtons);
-}
-
-// team section
-
-
-const teamCarousel = document.getElementById("team-carousel");
-const teamPrev = document.getElementById("team-prev");
-const teamNext = document.getElementById("team-next");
-
-teamNext.addEventListener("click", () => {
-  teamCarousel.scrollBy({ left: 300, behavior: "smooth" });
-});
-
-teamPrev.addEventListener("click", () => {
-  teamCarousel.scrollBy({ left: -300, behavior: "smooth" });
-});
-
 
 
 // demo section
@@ -144,36 +108,25 @@ teamPrev.addEventListener("click", () => {
     const successMessage = document.getElementById("successMessage");
 
     form.addEventListener("submit", function (e) {
-      e.preventDefault(); // prevent page reload
-
-      // Show success message
+      e.preventDefault(); 
       successMessage.style.display = "block";
-
-      // Reset form
       form.reset();
     });
   });
 
-
-
 // WhatsApp popups
-
-// Optional JS for blinking notification
 const notif = document.querySelector(".notification");
-
 setInterval(() => {
   notif.style.visibility = notif.style.visibility === "hidden" ? "visible" : "hidden";
 }, 800);
 
-
-
 // phone country code
 const phoneInput = document.querySelector("#phone");
   window.intlTelInput(phoneInput, {
-    initialCountry: "in", // Default country India
-    separateDialCode: true, // Shows country code separately
-    preferredCountries: ["in", "us", "gb"], // Optional: show common ones first
-  });
+    initialCountry: "in", 
+    separateDialCode: true,
+    preferredCountries: ["in", "us", "gb"], 
+ })
 
 
 

@@ -7,46 +7,38 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <style>
-/* Container */
+<style>
 .blog-post {
   display: flex;
-  flex-direction: column;   /* ✅ Always stack image then text */
+  flex-direction: column; 
   align-items: center;
   width: 100%;
   margin: 0 auto;
 }
-
-/* Image */
 .blog-image img {
-  width: 100%;              /* ✅ Full width */
-  max-width: 900px;         /* ✅ Limit size on big screens */
+  width: 100%;              
+  max-width: 900px;         
   height: auto;
   display: block;
   margin: 0 auto;
 }
-
-/* Text */
 .blog-text {
   width: 100%;
-  max-width: 900px;         /* ✅ Matches image width */
+  max-width: 900px;        
   padding: 20px;
-  text-align: justify;      /* ✅ Justify text */
+  text-align: justify;      
 }
-
 .blog-text h2 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  text-align: center;       /* ✅ Heading centered */
+  text-align: center;      
 }
-
 .blog-text p {
   font-size: 1.1rem;
   line-height: 1.6;
    max-width: 900px;  
 }
-
 /* 📱 Mobile adjustments */
 @media (max-width: 768px) {
   .blog-text h2 {
@@ -56,73 +48,58 @@
     font-size: 1rem;
   }
 }
-
-
-    </style>
-
+</style>
 
 <section id="blog1" class="blog-section">
-  <!-- Blog 1 -->
   <div class="blog-split">
     <div class="blog-image">
       <img src="blog1.png" alt="Blog 1">
     </div>
     <div class="blog-text">
-      <h2>WiFionGo: The Future of Seamless and Secure Public WiFi Connectivity
-</h2>
-      <p>
-In today's hyper-connected world, WiFi has become as essential as electricity and water. From working professionals in tech parks to travelers in airports and residents in large apartment complexes, reliable and seamless internet access is no longer a luxury — it’s a necessity.
-Yet, despite the proliferation of public and semi-public WiFi networks, the user experience is often clunky, frustrating, and sometimes insecure. Repeated logins, OTP verifications, splash screens, and password sharing are common pain points. WiFionGo, a revolutionary solution from Revolnet Technologies, is here to change that.
-<h4>  1️⃣ The Problem with Public WiFi Access Today</h4>
-<p>Most WiFi access solutions rely on captive portals or shared credentials, which come with several drawbacks:<br>
-- Friction in Connectivity: Users must log in every time they connect, often dealing with OTPs or entering long passwords.
+      <h2>WiFionGo: The Future of Seamless and Secure Public WiFi Connectivity</h2>
+          <p>
+            In today's hyper-connected world, WiFi has become as essential as electricity and water. From working professionals in tech parks to travelers in airports and residents in large apartment complexes, reliable and seamless internet access is no longer a luxury — it’s a necessity.
+            Yet, despite the proliferation of public and semi-public WiFi networks, the user experience is often clunky, frustrating, and sometimes insecure. Repeated logins, OTP verifications, splash screens, and password sharing are common pain points. WiFionGo, a revolutionary solution from Revolnet Technologies, is here to change that.
+              <h4>  1️⃣ The Problem with Public WiFi Access Today</h4>
+                  <p>Most WiFi access solutions rely on captive portals or shared credentials, which come with several drawbacks:<br>
+                    - Friction in Connectivity: Users must log in every time they connect, often dealing with OTPs or entering long passwords.
+                    - Security Risks: Shared credentials make networks vulnerable to unauthorized access, data breaches, and hacking attempts.
+                    - Poor User Experience: Constant disconnections and re-authentication requirements lead to frustration.
+                    - Lack of Visibility for Property Managers: Network admins often lack tools for tracking usage, enforcing policies, or managing bandwidth effectively.
+                    - These challenges highlight the need for a frictionless, secure, and scalable WiFi onboarding solution — this is where WiFionGo steps in.
+                  </p><br>
+             <h4>2️⃣ What is WiFionGo?</h4>
+                 <p>WiFionGo is a next-generation WiFi onboarding and access management solution that enables users to auto-connect to public or semi-public WiFi networks after a single registration. Designed for spaces like apartments, hotels, PGs, tech parks, cafes, and co-working spaces, WiFionGo transforms how people experience shared internet infrastructure.
+                    <br><br><h4>How It Works:</h4>
+                      <p>-  One-Time Sign-Up: Users register using their mobile number or unique identity (such as Aadhaar or email).
+                                <br>
+                         - Device Whitelisting: WiFionGo’s system securely maps the user’s device details to the registered identity.
+                                     <br>
+                         - Auto-Connect: Once registered, the device automatically connects to the WiFi network whenever it is in range — no repeated logins or OTP verifications.
+                                      <br>
+                        - Secure Access: All connections are encrypted, with advanced authentication protocols ensuring a safe browsing environment.
+                        </p>
+                  </p><br>]
+            <h4>3️⃣ Key Features and Technical Capabilities</h4>
+                <p>WiFionGo goes beyond just providing internet access — it creates a smart WiFi ecosystem for users, property owners, and ISPs.
+                   <br>🔐 Security-First Design:
+                            <br>
+                                     - Encrypted Connections: Uses WPA2/WPA3 encryption to ensure all data transmissions are secure.
 
+                                               <br>
+                                     - User Authentication: Tied to a verified mobile number or KYC-compliant ID to prevent unauthorized access.
 
-- Security Risks: Shared credentials make networks vulnerable to unauthorized access, data breaches, and hacking attempts.
+                                                     <br>
+                                     - Device Fingerprinting: We ensure only registered devices can access the network.
 
+                                          <br>
+                      ⚡ Frictionless User Experience:
+                              <br>
+                                   - No Captive Portals: Eliminates splash screens, OTP logins, and shared passwords.
 
-- Poor User Experience: Constant disconnections and re-authentication requirements lead to frustration.
-
-
-- Lack of Visibility for Property Managers: Network admins often lack tools for tracking usage, enforcing policies, or managing bandwidth effectively.
-
-
-- These challenges highlight the need for a frictionless, secure, and scalable WiFi onboarding solution — this is where WiFionGo steps in.
-</p><br>
-<h4>2️⃣ What is WiFionGo?</h4>
-  <p>WiFionGo is a next-generation WiFi onboarding and access management solution that enables users to auto-connect to public or semi-public WiFi networks after a single registration. Designed for spaces like apartments, hotels, PGs, tech parks, cafes, and co-working spaces, WiFionGo transforms how people experience shared internet infrastructure.
-<br><br><h4>How It Works:</h4>
-<p>
-- One-Time Sign-Up: Users register using their mobile number or unique identity (such as Aadhaar or email).
-<br>
-
-- Device Whitelisting: WiFionGo’s system securely maps the user’s device details to the registered identity.
-<br>
-
-- Auto-Connect: Once registered, the device automatically connects to the WiFi network whenever it is in range — no repeated logins or OTP verifications.
-<br>
-
-- Secure Access: All connections are encrypted, with advanced authentication protocols ensuring a safe browsing environment.
-</p></p><br><h4>3️⃣ Key Features and Technical Capabilities</h4>
-<p>WiFionGo goes beyond just providing internet access — it creates a smart WiFi ecosystem for users, property owners, and ISPs.
-<br>🔐 Security-First Design:
-<br>
-- Encrypted Connections: Uses WPA2/WPA3 encryption to ensure all data transmissions are secure.
-
-<br>
-- User Authentication: Tied to a verified mobile number or KYC-compliant ID to prevent unauthorized access.
-
-<br>
-- Device Fingerprinting: We ensure only registered devices can access the network.
-
-<br>
-⚡ Frictionless User Experience:
-<br>
-- No Captive Portals: Eliminates splash screens, OTP logins, and shared passwords.
-
-<br>
-- Automatic Roaming: Users can seamlessly connect to multiple WiFionGo-enabled hotspots under the same account.
-<br>
+                                       <br>
+                                            - Automatic Roaming: Users can seamlessly connect to multiple WiFionGo-enabled hotspots under the same account.
+                                            <br>
 
 - Zero Configuration: Works without manual network settings on most devices.
 <br>
@@ -211,8 +188,6 @@ WiFionGo bridges the gap between convenience, security, and scalability in publi
 </div>
   </div>
 </section>
-
-  <!-- Blog 2 -->
    
 <section id="blog2" class="blog-section">
   <div class="blog-split reverse">
@@ -348,6 +323,16 @@ We are currently onboarding properties and ISPs in Bangalore.
       </div>
   </div>
   </section>
+<section id="blog3" class="blog-section">
+  <div class="blog-split">
+    <div class="blog-image">
+      <img src="blog3.png" alt="Blog 3">
+    </div>
+    <div class="blog-text">
+    </div>
+  </div>
+</section>
+
 </body>
 </html>
 

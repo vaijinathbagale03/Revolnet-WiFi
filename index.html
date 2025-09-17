@@ -19,47 +19,29 @@
   </a>
 </div>
 
-  <!-- Header / Navigation -->
-<header class="header" role="banner">
-  <nav class="nav" aria-label="Primary">
+ <!-- HEADER -->
+  <header class="navbar">
+    <div class="logo">
     <span class="css-logo__circle">R</span>
       <span class="name">REVOLNET</span>
-          <!-- Desktop Menu -->
-        <div class="menu" id="desktop-menu">
+      </div>
+    <nav class="nav-links" id="navLinks">
+      
           <a href="#home" data-nav>Home</a>
           <a href="https://vaijinathbagale03.github.io/WiFionGo/" data-nav>WiFionGo</a>
           <a href="#about" data-nav>About</a>
-          <a href="#blogs" data-nav>Blog</a>
-          <a href="#services" data-nav>Service</a>
-          <a href="#team" data-nav>Team</a>
-          <a href="#contact" data-nav>Contact</a>
-          <a href="#contact" data-nav>Map</a>
-          <a href="#demo" data-nav>Request a Demo</a>
-        </div>
-  </nav>
-  <!-- Mobile hamburger -->
-  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="mobile-drawer" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  <!-- Mobile Drawer -->
-  <aside class="drawer" id="mobile-drawer" aria-hidden="true" aria-labelledby="hamburger" role="dialog">
-    <div class="drawer__scrim" data-close></div>
-      <div class="drawer__panel" role="document">
-        <button class="close-btn" data-close aria-label="Close menu">✕</button>
-          <a href="#home" data-nav>Home</a>
-          <a href="https://vaijinathbagale03.github.io/WiFionGo/" data-nav>WiFionGo</a>
-          <a href="#about" data-nav>About Us</a>
-          <a href="#blogs" data-nav>Blog</a>
-          <a href="#services" data-nav>Service</a>
-          <a href="#team" data-nav>Team</a>
-          <a href="#contact" data-nav>Contact</a>
-          <a href="#map" data-nav>Map</a>
-          <a href="#demo" data-nav>Request a Demo</a>
-      </div>
-    </aside>
-</header>
+          <a href="#blogs">Blog</a>
+          <a href="#services">Service</a>
+          <a href="#team">Team</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Map</a>
+          <a href="#demo">Request a Demo</a>
+    </nav>
+     <aside class="drawer" id="mobile-drawer" aria-hidden="true" aria-labelledby="hamburger" role="dialog"></aside>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+   
+  </header>
+<main>
 
     <!-- Home Section -->
 <section id="home" class="home">
@@ -129,7 +111,7 @@
         <img src="blog1.png" alt="WiFionGo Blog 1" class="blog-img">
         <div class="blog-content">
           <h3>WiFionGo: The Future of Seamless and Secure Public WiFi Connectivity</h3>
-             <p>In today's hyper-connected world, WiFi has become as essential as electricity and water...</p>
+             <p>From working professionals in tech parks to travelers in airports and residents in large apartment complexes, reliable and seamless internet access is no longer a luxury...</p>
                 <a href="blogs.html#blog1" class="blog-link">Read Blog →</a>
         </div>
       </div>
@@ -145,8 +127,8 @@
       <div class="blog-card">
         <img src="blog3.png" alt="WiFionGo Blog 3" class="blog-img">
         <div class="blog-content">
-          <h3>Beyond WiFi Access: Analytics & Security with WiFionGo</h3>
-            <p>WiFionGo isn’t just about connectivity—it’s about control...</p>
+          <h3>WiFionGo: Transforming Public Wi-Fi Into Seamless Experiences Everywhere</h3>
+            <p>Public Wi-Fi is no longer just a convenience. In today’s digital-first world, it’s a necessity—whether people are grabbing coffee, waiting for a flight, shopping, working, or studying...</p>
               <a href="blogs.html#blog3" class="blog-link">Read Blog →</a>
         </div>
       </div>
@@ -174,22 +156,27 @@
             <img src="security.jpg" alt="Security" class="card-img">
               <h3>Security</h3>
                 <p>RADIUS, IPDR, and policy controls ensure compliance and peace of mind.</p>
-            <button class="btn secondary">Learn More</button>
+                    <a href="service.html#s1" rel="noopener noreferrer">
+                          <button class="btn secondary">Learn More</button>
+                    </a>
+
           </div>
 
           <div class="service-card">
             <img src="performance.jpg" alt="Performance" class="card-img">
               <h3>Performance</h3>
                 <p>Fast roaming and reliable connectivity for seamless user experience.</p>
-            <button class="btn secondary">Learn More</button>
-          </div>
+                    <a href="service.html#s2" rel="noopener noreferrer">
+                          <button class="btn secondary">Learn More</button>
+                    </a>  </div>
 
           <div class="service-card">
             <img src="scalability.jpg" alt="Scalability" class="card-img">
               <h3>Scalability</h3>
                 <p>Easy rollout for hotels, apartments, and tech parks with zero hassle.</p>
-            <button class="btn secondary">Learn More</button>
-         </div>
+                    <a href="service.html#s3" rel="noopener noreferrer">
+                          <button class="btn secondary">Learn More</button>
+                    </a></div>
         </div> 
     </div>
   </div>
@@ -201,23 +188,21 @@
     <div class="team-underline"></div>
     <div class="team-container">
       <div class="team-card">
-      <img src="new.png" alt="Siddaram Patil" class="team-img">
+      <img src="Siddharam.jpg" alt="Siddaram Patil" class="team-img">
       <div class="team-info">
         <h3>Siddaram Patil</h3>
         <p class="team-role">Co-founder and Director</p>
         <p class="team-desc">
-         Description
-        </p>
+       </p>
         <a href="https://www.linkedin.com/in/siddaram-patil-3011672b" target="_blank">LinkedIn</a>
       </div>
     </div>
     <div class="team-card">
-      <img src="new.png" alt="Prashanth Kumar" class="team-img">
+      <img src="Prashant.jpg" alt="Prashanth Kumar" class="team-img">
       <div class="team-info">
         <h3>Prashanth Kumar</h3>
         <p class="team-role">Co-founder and Director</p>
         <p class="team-desc">
-      Description
         </p>
         <a href="https://www.linkedin.com/in/prashanth-kumar-k-r-49830240" target="_blank">LinkedIn</a>
       </div>
@@ -238,7 +223,7 @@
               <h2>We'd love to hear from you!</h2>
                   <p>Please let us know what you are looking for and we will get in touch with you</p>
               <hr>
-              <h3>Email:<a href="dir@revolnet.com"> dir@revolnet.com</a></h3>
+              <h3>Email:<a href="mailto:dir@revolnet.com"> dir@revolnet.com</a></h3>
               <h3>Phone:<a>+91-9901610675</a></h3>
               <h3>Address:<a> Revolnet Technologies Private Limited, 17, 7th Main Rd, Indiranagar II Stage, Bengaluru, Karnataka 560038</a></h3>
               <hr>
@@ -500,12 +485,12 @@
       </p>
   </div>
 </footer>
-
-
   <script src="script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
 </body>
 </html>
+
+
 
 
 
